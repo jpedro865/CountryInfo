@@ -17,13 +17,18 @@ class _MyAppState extends State<MyApp> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       home: Scaffold(
           backgroundColor: const Color.fromRGBO(12, 19, 31, 100),
           appBar: AppBar(
             backgroundColor: const Color.fromRGBO(12, 19, 31, 100),
             title: const Text('Countries info'),
           ),
-          body: const StartScreen()),
+          body: const Padding(
+            padding: EdgeInsets.all(8.0),
+            child: StartScreen(),
+          )
+        ),
     );
   }
 }
